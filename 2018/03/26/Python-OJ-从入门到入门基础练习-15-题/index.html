@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Python," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="1、永远的 HelloWorld： 1print(&quot;Hello World&quot;) 2、M与N的数学运算：用户输入两个数 M 和 N，其中 N 是整数，计算M 和 N 的5种数学运算结果，并依次输出，结果间用空格分隔。 5种数学运算分别是：M 与 N 的和、M 与 N 的乘积、M 的 N 次幂、M除 N 的余数、M 和 N 中较大的值。">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python OJ 从入门到入门基础练习 15 题">
+<meta property="og:url" content="https://compassblog.github.io/2018/03/26/Python-OJ-从入门到入门基础练习-15-题/index.html">
+<meta property="og:site_name" content="compassblog">
+<meta property="og:description" content="1、永远的 HelloWorld： 1print(&quot;Hello World&quot;) 2、M与N的数学运算：用户输入两个数 M 和 N，其中 N 是整数，计算M 和 N 的5种数学运算结果，并依次输出，结果间用空格分隔。 5种数学运算分别是：M 与 N 的和、M 与 N 的乘积、M 的 N 次幂、M除 N 的余数、M 和 N 中较大的值。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/3/19/1623efa4fd320c87?w=718&h=373&f=png&s=8047">
+<meta property="og:updated_time" content="2018-03-26T11:35:49.718Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python OJ 从入门到入门基础练习 15 题">
+<meta name="twitter:description" content="1、永远的 HelloWorld： 1print(&quot;Hello World&quot;) 2、M与N的数学运算：用户输入两个数 M 和 N，其中 N 是整数，计算M 和 N 的5种数学运算结果，并依次输出，结果间用空格分隔。 5种数学运算分别是：M 与 N 的和、M 与 N 的乘积、M 的 N 次幂、M除 N 的余数、M 和 N 中较大的值。">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2018/3/19/1623efa4fd320c87?w=718&h=373&f=png&s=8047">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://compassblog.github.io/2018/03/26/Python-OJ-从入门到入门基础练习-15-题/"/>
+
+
+
+
+
+  <title>Python OJ 从入门到入门基础练习 15 题 | compassblog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">compassblog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">非淡泊无以明志，非宁静无以致远</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://compassblog.github.io/2018/03/26/Python-OJ-从入门到入门基础练习-15-题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="孔乙己">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="compassblog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Python OJ 从入门到入门基础练习 15 题</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-26T19:33:45+08:00">
+                2018-03-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>1、永远的 HelloWorld：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"Hello World"</span>)</span><br></pre></td></tr></table></figure>
+<p><strong>2、M与N的数学运算：</strong>用户输入两个数 M 和 N，其中 N 是整数，计算M 和 N 的5种数学运算结果，并依次输出，结果间用空格分隔。</p>
+<p>5种数学运算分别是：M 与 N 的和、M 与 N 的乘积、M 的 N 次幂、M除 N 的余数、M 和 N 中较大的值。</p>
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">m = eval(input())</span><br><span class="line">n = eval(input())</span><br><span class="line"></span><br><span class="line">list = []</span><br><span class="line">list.append(str(m+n))</span><br><span class="line">list.append(str(m*n))</span><br><span class="line">list.append(str(m**n))</span><br><span class="line">list.append(str(m%n))</span><br><span class="line"><span class="keyword">if</span> m &gt; n:</span><br><span class="line">    list.append(str(m))</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    list.append(str(n))</span><br><span class="line">print(<span class="string">" "</span>.join(tuple(list)))</span><br></pre></td></tr></table></figure>
+<p><strong>3、将输入的字符串垂直输出：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Output</span><span class="params">(string)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> char <span class="keyword">in</span> string:</span><br><span class="line">        print(char)</span><br><span class="line"></span><br><span class="line">s = input()</span><br><span class="line">Output(s)</span><br></pre></td></tr></table></figure>
+<p><strong>4、计算矩形面积：</strong>用户输入矩形的长和宽，计算其面积并输出，结果四舍五入，保留2位小数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = eval(input(<span class="string">"请输入矩形长度:"</span>))</span><br><span class="line">b = eval(input(<span class="string">"请输入矩形宽度:"</span>))</span><br><span class="line"></span><br><span class="line">print(<span class="string">"面积是:%.2f"</span>%(a*b))</span><br></pre></td></tr></table></figure>
+<p><strong>5、计算2的n次方：</strong>n由用户输入</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = eval(input())</span><br><span class="line"></span><br><span class="line">print(<span class="number">2</span>**a)</span><br></pre></td></tr></table></figure>
+<p><strong>6、成绩转换：</strong>编写一个学生成绩转换程序，用户输入百分制的学生成绩，成绩大于或等于60的输出“pass”，否则输出“fail”，成绩不四舍五入。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = eval(input())</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="number">100</span> &gt;= a &gt;= <span class="number">60</span>:</span><br><span class="line">    print(<span class="string">"pass"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">"fail"</span>)</span><br></pre></td></tr></table></figure>
+<p><strong>7、完美立方：</strong>找到大于1的4个整数满足完美立方等式：a3=b3+c3+d3（例如123=63+83+103）。编写一个程序，对于任意给定的正整数N（N ≤100），寻找所有的四元组（a,b,c,d），满足a3=b3+c3+d3，其中1&lt;a，b，c，d≤N。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">n = int(input())  <span class="comment"># n范围内的立方数</span></span><br><span class="line"></span><br><span class="line">list_cube = [<span class="number">0</span>]  <span class="comment"># 用于存储立方数的列表</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, n + <span class="number">1</span>):</span><br><span class="line">    list_cube.append(i * i * i)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> a <span class="keyword">in</span> range(<span class="number">6</span>, n + <span class="number">1</span>):</span><br><span class="line">    <span class="keyword">for</span> b <span class="keyword">in</span> range(<span class="number">2</span>, a - <span class="number">1</span>):</span><br><span class="line">        <span class="keyword">if</span> list_cube[a] &lt; (list_cube[b] + list_cube[b + <span class="number">1</span>] + list_cube[b + <span class="number">2</span>]):</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> range(b + <span class="number">1</span>, a):</span><br><span class="line">            <span class="keyword">if</span> list_cube[a] &lt; (list_cube[b] + list_cube[c] + list_cube[c + <span class="number">1</span>]):</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">for</span> d <span class="keyword">in</span> range(c + <span class="number">1</span>, a):</span><br><span class="line">                <span class="keyword">if</span> list_cube[a] == (list_cube[b] + list_cube[c] + list_cube[d]):</span><br><span class="line">                    print(<span class="string">"Cube=%d,Tripe=(%d,%d,%d)"</span> % (a, b, c, d))</span><br></pre></td></tr></table></figure>
+<p><strong>8、货币转换：</strong>写一个程序进行货币间币值转换，其中：人民币和美元间汇率固定为：1美元 = 6.78人民币。</p>
+<p>程序可以接受人民币或美元输入，转换为美元或人民币输出。人民币采用RMB表示，美元USD表示，符号和数值之间没有空格。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line">money = input().lower()</span><br><span class="line">tmp=re.findall(<span class="string">'usd|rmb'</span>,money)</span><br><span class="line"><span class="keyword">if</span> len(tmp)==<span class="number">0</span> <span class="keyword">or</span> len(tmp)&gt;<span class="number">1</span>:</span><br><span class="line">    print(<span class="string">'wrong'</span>)</span><br><span class="line">money=re.sub(tmp[<span class="number">0</span>],<span class="string">''</span>,money)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    num=float(money)</span><br><span class="line">    <span class="keyword">if</span> <span class="string">'usd'</span> <span class="keyword">in</span> tmp:</span><br><span class="line">        print(<span class="string">'RMB%.2f'</span>%(num*<span class="number">6.78</span>))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">'USD%.2f'</span>%(num/<span class="number">6.78</span>))</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    print(<span class="string">'wrong'</span>)</span><br></pre></td></tr></table></figure>
+<p><strong>9、月份缩写：</strong>如果有 months = “Jan.Feb.Mar.Apr.May.Jun.Jul.Aug.Sep.Oct.Nov.Dec.”，编写一个程序，用户输入一个月份的数字，输出月份的缩写。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">months = <span class="string">"Jan.Feb.Mar.Apr.May.Jun.Jul.Aug.Sep.Oct.Nov.Dec."</span></span><br><span class="line">n = input()</span><br><span class="line"></span><br><span class="line"><span class="comment">#（每个月份的数字-1）*4就是这个月份简写的开始索引，截取4个字符</span></span><br><span class="line">index = (int(n)<span class="number">-1</span>)*<span class="number">4</span></span><br><span class="line">month = months[index: index + <span class="number">4</span>]</span><br><span class="line">print(month)</span><br></pre></td></tr></table></figure>
+<p><strong>10、温度转换：</strong>编写程序将用户输入华氏度转换为摄氏度，或将输入的摄氏度转换为华氏度。</p>
+<p>转换算法如下：（C表示摄氏度、F表示华氏度）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C = ( F - 32 ) / 1.8</span><br><span class="line">F = C * 1.8 + 32</span><br></pre></td></tr></table></figure>
+<p>要求如下：</p>
+<p>(1) 输入输出的摄氏度采用大写字母C开头，温度可以是整数或小数，如：C12.34指摄氏度12.34度；</p>
+<p>(2) 输入输出的华氏度采用大写字母F开头，温度可以是整数或小数，如：F87.65指摄氏度87.65度；</p>
+<p>(3) 不考虑异常输入的问题，输出保留小数点后两位；</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Temperature = input()</span><br><span class="line"><span class="keyword">if</span> Temperature[<span class="number">0</span>] <span class="keyword">in</span> [<span class="string">'F'</span>]:</span><br><span class="line">    C = (eval(Temperature[<span class="number">1</span>:])<span class="number">-32</span>)/<span class="number">1.8</span></span><br><span class="line">    print(<span class="string">"C&#123;:.2f&#125;"</span>.format(C))</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    F = <span class="number">1.8</span>*eval(Temperature[<span class="number">1</span>:])+<span class="number">32</span></span><br><span class="line">    print(<span class="string">"F&#123;:.2f&#125;"</span>.format(F))</span><br></pre></td></tr></table></figure>
+<p><strong>11、汇率兑换：</strong>按照1美元=6人民币的汇率来编写一个美元与人民币的双向兑换程序</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">money = input()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> money[<span class="number">-1</span>] <span class="keyword">in</span> [<span class="string">'$'</span>]:</span><br><span class="line">    m = <span class="number">6</span>*eval(money[:<span class="number">-1</span>])</span><br><span class="line">    print(<span class="string">"&#123;:.2f&#125;R"</span>.format(m))</span><br><span class="line"></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">if</span> money[<span class="number">-1</span>] <span class="keyword">in</span> [<span class="string">'R'</span>]:</span><br><span class="line">        m = eval(money[:<span class="number">-1</span>])/<span class="number">6</span></span><br><span class="line">        print(<span class="string">"&#123;:.2f&#125;$"</span>.format(m))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">"输入错误！"</span>)</span><br></pre></td></tr></table></figure>
+<p><strong>12、恺撒密码：</strong>凯撒密码是古罗马凯撒大帝用来对军事情报进行加解密的算法，它采用了替换方法对信息中的每一个英文字符循环替换为字母表序列中该字符后面的第三个字符，即，字母表的对应关系如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">原文：A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</span><br><span class="line">密文：D E F G H I J K L M N O P Q R S T U V W X Y Z A B C</span><br></pre></td></tr></table></figure>
+<p>对于原文字符P，其密文字符C满足如下条件：C=(P+3) mod 26</p>
+<p>上述是凯撒密码的加密方法，解密方法反之，即：P=(C-3) mod 26</p>
+<p>假设用户可能使用的输入仅包含小写字母a~z和空格，请编写一个程序，对输入字符串进行凯撒密码加密，直接输出结果，其中空格不用进行加密处理。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">sr1 = <span class="string">"abcdefghijklmnopqrstuvwxyz"</span></span><br><span class="line">sr2 = sr1.upper()</span><br><span class="line">sr = sr1 + sr1 + sr2 + sr2</span><br><span class="line">in_str = input(<span class="string">""</span>)</span><br><span class="line">out_str = <span class="string">""</span></span><br><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> in_str:</span><br><span class="line">    <span class="keyword">if</span> j == <span class="string">" "</span>:</span><br><span class="line">        out_str = out_str + <span class="string">" "</span></span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    i = sr.find(j)</span><br><span class="line">    <span class="keyword">if</span>(i &gt; <span class="number">-1</span>):</span><br><span class="line">        out_str = out_str + sr[i+<span class="number">3</span>]</span><br><span class="line">print(out_str)</span><br></pre></td></tr></table></figure>
+<p><strong>13、个人所得税计算：</strong>个人所得税采用“超额累进税率”计算方法，简化公式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">缴税 = （个人薪金扣险所得 – 个税免征额）* 税率</span><br></pre></td></tr></table></figure>
+<p>其中，个税免征额为3500元，税率根据应纳税额数量而不同，如下图所示：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/3/19/1623efa4fd320c87?w=718&amp;h=373&amp;f=png&amp;s=8047" alt="img"></p>
+<p>注意：“应纳税额”为：个人薪金扣险所得 – 个税免征额</p>
+<p>请编写一个程序根据用户输入计算个人所得税，用户输入是个人薪金扣险所得。</p>
+<p>约定用户输入为以人民币元为单位的整数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">m = int(input())</span><br><span class="line">ans = <span class="number">0</span></span><br><span class="line"><span class="keyword">if</span> m &gt; <span class="number">3500</span>:</span><br><span class="line">    m1 = m - <span class="number">3500</span></span><br><span class="line">    <span class="keyword">if</span> m1 &lt; <span class="number">1500</span>:</span><br><span class="line">        ans = <span class="number">0.03</span> * m1</span><br><span class="line">    <span class="keyword">elif</span> m1 &lt; <span class="number">4500</span>:</span><br><span class="line">        ans = <span class="number">0.1</span> * m1</span><br><span class="line">    <span class="keyword">elif</span> m1 &lt; <span class="number">9000</span>:</span><br><span class="line">        ans = <span class="number">0.2</span> * m1</span><br><span class="line">    <span class="keyword">elif</span> m1 &lt; <span class="number">35000</span>:</span><br><span class="line">        ans = <span class="number">0.25</span> * m1</span><br><span class="line">    <span class="keyword">elif</span> m1 &lt; <span class="number">55000</span>:</span><br><span class="line">        ans = <span class="number">0.3</span> * m1</span><br><span class="line">    <span class="keyword">elif</span> m1 &lt; <span class="number">80000</span>:</span><br><span class="line">        ans = <span class="number">0.35</span> * m1</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        ans = <span class="number">0.45</span> * m1</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    ans = <span class="number">0</span></span><br><span class="line">print(<span class="string">"%.0f"</span>%ans)</span><br></pre></td></tr></table></figure>
+<p><strong>14、3位水仙花数计算：</strong>“3位水仙花数”是指一个三位整数，其各位数字的3次方和等于该数本身。例如：ABC是一个“3位水仙花数”，则：A的3次方＋B的3次方＋C的3次方 = ABC。</p>
+<p>请按照从小到大的顺序输出所有的3位水仙花数，请用一个“逗号+空格”分隔输出结果。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line">list = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">100</span>, <span class="number">1000</span>):</span><br><span class="line">    x = math.floor(i / <span class="number">100</span>)</span><br><span class="line">    y = math.floor((i - x * <span class="number">100</span>) / <span class="number">10</span>)</span><br><span class="line">    z = i - math.floor(i / <span class="number">10</span>) * <span class="number">10</span></span><br><span class="line">    <span class="keyword">if</span> i == x ** <span class="number">3</span> + y ** <span class="number">3</span> + z ** <span class="number">3</span>:</span><br><span class="line">        list.append(str(i))</span><br><span class="line">print(<span class="string">", "</span>.join(tuple(list)))</span><br></pre></td></tr></table></figure>
+<p><strong>15、统计下列英文诗歌：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">All that doth flow we cannot liquid name</span><br><span class="line">Or else would fire and water be the same;</span><br><span class="line">But that is liquid which is moist and wet</span><br><span class="line">Fire that property can never get.</span><br><span class="line">Then &apos;tis not cold that doth the fire put out</span><br><span class="line">But &apos;tis the wet that makes it die, no doubt.</span><br></pre></td></tr></table></figure>
+<p>编程实现对纽卡斯伯爵的不朽名篇What Is Liquid的统计工作。这首诗（1）有多少个字符？（计入空格和换行符）（2）判断是否以All开头？（3）判断是否以That’s all, folks!结尾？（4）第一次和最后一次出现单词the的位置（偏移量）。（5）the出现的总次数？（6）判断诗中出现的所有字符是否都是字母和数字？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">"All that doth flow we cannot liquid name Or else would fire and water be the same;But that is liquid which is moist and wet Fire that property can never get. Then 'tis not cold that doth the fire put out But 'tis the wet that makes it die, no doubt. "</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">"这首词总共有:"</span> + str(len(s)) + <span class="string">"个字符串"</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">"这首诗是否以All开头:"</span>,s.startswith(<span class="string">'All'</span>))</span><br><span class="line">print(<span class="string">"这首诗是否以That\'s all, folks!结尾:"</span>,s.endswith(<span class="string">'That\'s all, folks!'</span>))</span><br><span class="line"></span><br><span class="line">print(<span class="string">"第一次出现单词the的位置:"</span>,s.find(<span class="string">' the '</span>))</span><br><span class="line">print(<span class="string">"最后一次出现单词the的位置:"</span>,s.rfind(<span class="string">' the '</span>))</span><br><span class="line"></span><br><span class="line">print(<span class="string">"the在诗中出现的总次数:"</span>,s.count(<span class="string">' the '</span>))</span><br><span class="line"></span><br><span class="line">print(<span class="string">"是否诗中出现的所有字符都是字母和数字:"</span>,s.isalnum())</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/wechat-qcode.jpg" alt="孔乙己 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>扫描二维码关注微信公众号，了解更多</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>您的赞赏是我坚持分享的动力！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="孔乙己 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="孔乙己 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/23/基于-Hexo-GitHub-Pages-搭建个人博客（二）/" rel="next" title="基于 Hexo + GitHub Pages 搭建个人博客（二）">
+                <i class="fa fa-chevron-left"></i> 基于 Hexo + GitHub Pages 搭建个人博客（二）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/26/Python-OJ-从入门到入门基础练习-10-题/" rel="prev" title="Python OJ 从入门到入门基础练习 10 题">
+                Python OJ 从入门到入门基础练习 10 题 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/logo.jpg"
+                alt="孔乙己" />
+            
+              <p class="site-author-name" itemprop="name">孔乙己</p>
+              <p class="site-description motion-element" itemprop="description">微信公众号：compassblog</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/compassblog" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:compassblog@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://stackoverflow.com/users/9525953/compassblog" target="_blank" title="StackOverflow">
+                      
+                        <i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.compasser.top/" title="compassblog" target="_blank">compassblog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://blog.csdn.net/leonard_kongtanhuo" title="CSND" target="_blank">CSND</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.cnblogs.com/compassblog/" title="cnblogs" target="_blank">cnblogs</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://juejin.im/user/5a8818515188257a6a78d489" title="掘金" target="_blank">掘金</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.jianshu.com/u/abbd9852b382" title="简书" target="_blank">简书</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.zhihu.com/people/qian-nian-lao-yao-72-65/activities" title="知乎" target="_blank">知乎</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">指南者工作室</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
