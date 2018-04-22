@@ -977,10 +977,15 @@
         var gitalk = new Gitalk({
           clientID: 'e711386b11390f68ead3',
           clientSecret: 'e05501bbd3798c2612ecccf3b63def4c9fb9b56c',
-          repo: 'bolg-comments',
+          repo: 'blog-comments',
           owner: 'compassblog',
           admin: ['compassblog'],
-          distractionFreeMode: true
+          id: location.pathname,
+          labels: 'gitalk',
+          perPage: 15,
+          pagerDirection: 'last',
+          createIssueManually: true,
+          distractionFreeMode: false
         })
 
         gitalk.render('gitalk-container')           
