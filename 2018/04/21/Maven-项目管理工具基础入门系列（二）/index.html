@@ -924,12 +924,12 @@
           repo: 'blog-comments',
           owner: 'compassblog',
           admin: ['compassblog'],
-          id: ,
-          labels: '',
-          perPage: ,
-          pagerDirection: '',
-          createIssueManually: ,
-          distractionFreeMode: false
+          id: location.pathname,
+          labels: 'gitalk',
+          perPage: 15,
+          pagerDirection: 'last',
+          createIssueManually: true,
+          distractionFreeMode: true
         })
 
         gitalk.render('gitalk-container')           
