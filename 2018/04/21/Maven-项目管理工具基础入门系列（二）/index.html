@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Maven,Java,项目管理工具," />
+  <meta name="keywords" content="Java,Maven,项目管理工具," />
 
 
 
@@ -80,7 +80,7 @@
 
 
 <meta name="description" content="一、前言在 Maven 项目管理工具基础知识系列（一） 这篇文章中，我们已经初步了解了 Maven，也知道了使用 Maven 作为项目管理工具的好处，特别是已经知道如何快速通过 Maven 构建 Web 项目，但上次有同学说通过上一篇文章构建的 Web 项目没有找到 web.xml 文件，这是因为没有跳过骨架的缘故。 是的，创建 Maven 项目如果不跳过骨架，那么就需要自己手动设置 Web 项">
-<meta name="keywords" content="Maven,Java,项目管理工具">
+<meta name="keywords" content="Java,Maven,项目管理工具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Maven 项目管理工具基础入门系列（二）">
 <meta property="og:url" content="https://compassblog.github.io/2018/04/21/Maven-项目管理工具基础入门系列（二）/index.html">
@@ -499,9 +499,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Maven/" rel="tag"># Maven</a>
-          
             <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/Maven/" rel="tag"># Maven</a>
           
             <a href="/tags/项目管理工具/" rel="tag"># 项目管理工具</a>
           
@@ -554,10 +554,7 @@
           
 
   
-    <div class="comments" id="comments">
-      <div id="gitalk-container"></div>
-    </div>
-
+    <div id="gitalk-container"></div>
   
 
 
@@ -914,28 +911,30 @@
 
 
 
-  
-  
 
-          
-      <link rel='stylesheet' href="https://yiyeti.cc/usr/themes/veryse/css/gitalk.css">
-      <script src="https://yiyeti.cc/usr/themes/veryse/css/gitalk.min.js"></script>
-      <script type="text/javascript">
-          var gitalk = new Gitalk({
-            clientID:  '94843c79c54254fb5d33', 
-            clientSecret: '66e64feac84732ace88ae9e52e3e776582d00e31',
-            id: window.location.pathname,
-            repo: 'blog-comments', 
-            owner: 'compassblog', 
-            admin: 'compassblog', 
-            distractionFreeMode: 'true',
-          })
-          gitalk.render('gitalk-container')
-      </script>
-    
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 
-  
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: 'e711386b11390f68ead3',
+          clientSecret: 'e05501bbd3798c2612ecccf3b63def4c9fb9b56c',
+          repo: 'bolg-comments',
+          owner: 'compassblog',
+          admin: ['compassblog'],
+          id: location.pathname,
+          labels: 'gitalk',
+          perPage: 15,
+          pagerDirection: 'last',
+          createIssueManually: true,
+          distractionFreeMode: false
+        })
+
+        gitalk.render('gitalk-container')           
+       </script>
+
+.gt-container a{border-bottom: none;}
 
   
 

@@ -637,10 +637,7 @@
           
 
   
-    <div class="comments" id="comments">
-      <div id="gitalk-container"></div>
-    </div>
-
+    <div id="gitalk-container"></div>
   
 
 
@@ -997,28 +994,30 @@
 
 
 
-  
-  
 
-          
-      <link rel='stylesheet' href="https://yiyeti.cc/usr/themes/veryse/css/gitalk.css">
-      <script src="https://yiyeti.cc/usr/themes/veryse/css/gitalk.min.js"></script>
-      <script type="text/javascript">
-          var gitalk = new Gitalk({
-            clientID:  '94843c79c54254fb5d33', 
-            clientSecret: '66e64feac84732ace88ae9e52e3e776582d00e31',
-            id: window.location.pathname,
-            repo: 'blog-comments', 
-            owner: 'compassblog', 
-            admin: 'compassblog', 
-            distractionFreeMode: 'true',
-          })
-          gitalk.render('gitalk-container')
-      </script>
-    
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 
-  
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: 'e711386b11390f68ead3',
+          clientSecret: 'e05501bbd3798c2612ecccf3b63def4c9fb9b56c',
+          repo: 'bolg-comments',
+          owner: 'compassblog',
+          admin: ['compassblog'],
+          id: location.pathname,
+          labels: 'gitalk',
+          perPage: 15,
+          pagerDirection: 'last',
+          createIssueManually: true,
+          distractionFreeMode: false
+        })
+
+        gitalk.render('gitalk-container')           
+       </script>
+
+.gt-container a{border-bottom: none;}
 
   
 

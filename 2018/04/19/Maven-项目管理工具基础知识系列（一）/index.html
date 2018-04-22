@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Maven,Java,项目管理工具," />
+  <meta name="keywords" content="Java,Maven,项目管理工具," />
 
 
 
@@ -80,7 +80,7 @@
 
 
 <meta name="description" content="一、Maven 简介Maven 中文意为 “ 内行、专家 ”，是 Apache 下的一个开源项目，属于纯 Java 开发，并且只是用来管理 Java项目的，它是一款项目管理工具，使用 Maven 可以对 Java 项目进行构建和依赖管理，项目构建即项目的编码、编译、测试、运行、打包、部署等过程，依赖管理即对 项目所需要的 jar 包统一管理。 目前， Maven 也是一款非常热门好用的项目管理工具">
-<meta name="keywords" content="Maven,Java,项目管理工具">
+<meta name="keywords" content="Java,Maven,项目管理工具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Maven 项目管理工具基础知识系列（一）">
 <meta property="og:url" content="https://compassblog.github.io/2018/04/19/Maven-项目管理工具基础知识系列（一）/index.html">
@@ -513,9 +513,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Maven/" rel="tag"># Maven</a>
-          
             <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/Maven/" rel="tag"># Maven</a>
           
             <a href="/tags/项目管理工具/" rel="tag"># 项目管理工具</a>
           
@@ -572,10 +572,7 @@
           
 
   
-    <div class="comments" id="comments">
-      <div id="gitalk-container"></div>
-    </div>
-
+    <div id="gitalk-container"></div>
   
 
 
@@ -932,28 +929,30 @@
 
 
 
-  
-  
 
-          
-      <link rel='stylesheet' href="https://yiyeti.cc/usr/themes/veryse/css/gitalk.css">
-      <script src="https://yiyeti.cc/usr/themes/veryse/css/gitalk.min.js"></script>
-      <script type="text/javascript">
-          var gitalk = new Gitalk({
-            clientID:  '94843c79c54254fb5d33', 
-            clientSecret: '66e64feac84732ace88ae9e52e3e776582d00e31',
-            id: window.location.pathname,
-            repo: 'blog-comments', 
-            owner: 'compassblog', 
-            admin: 'compassblog', 
-            distractionFreeMode: 'true',
-          })
-          gitalk.render('gitalk-container')
-      </script>
-    
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 
-  
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: 'e711386b11390f68ead3',
+          clientSecret: 'e05501bbd3798c2612ecccf3b63def4c9fb9b56c',
+          repo: 'bolg-comments',
+          owner: 'compassblog',
+          admin: ['compassblog'],
+          id: location.pathname,
+          labels: 'gitalk',
+          perPage: 15,
+          pagerDirection: 'last',
+          createIssueManually: true,
+          distractionFreeMode: false
+        })
+
+        gitalk.render('gitalk-container')           
+       </script>
+
+.gt-container a{border-bottom: none;}
 
   
 
