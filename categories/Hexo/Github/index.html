@@ -82,7 +82,7 @@
 <meta name="description" content="微信公众号：compassblog">
 <meta property="og:type" content="website">
 <meta property="og:title" content="compassblog">
-<meta property="og:url" content="https://compassblog.github.io/categories/Hexo/Github/index.html">
+<meta property="og:url" content="https://compassblog.github.io/categories/Hexo/GitHub/index.html">
 <meta property="og:site_name" content="compassblog">
 <meta property="og:description" content="微信公众号：compassblog">
 <meta property="og:locale" content="zh-Hans">
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="https://compassblog.github.io/categories/Hexo/Github/"/>
+  <link rel="canonical" href="https://compassblog.github.io/categories/Hexo/GitHub/"/>
 
 
 
 
 
-  <title>分类: Github | compassblog</title>
+  <title>分类: GitHub | compassblog</title>
   
 
 
@@ -298,7 +298,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>Github<small>分类</small>
+        <h1>GitHub<small>分类</small>
         </h1>
       </div>
 
@@ -310,37 +310,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2018/04/22/基于-Hexo-GitHub-Pages-搭建个人博客（三）/" itemprop="url">
+            <a class="post-title-link" href="/2018/04/23/将-Hexo-个人博客同时部署到-GitHub-和-Coding-上/" itemprop="url">
               
-                <span itemprop="name">基于 Hexo + GitHub Pages 搭建个人博客（三）</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-22T23:51:07+08:00"
-              content="2018-04-22" >
-          04-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/03/23/基于-Hexo-GitHub-Pages-搭建个人博客（二）/" itemprop="url">
-              
-                <span itemprop="name">基于 Hexo + GitHub Pages 搭建个人博客（二）</span>
+                <span itemprop="name">将 Hexo 个人博客同时部署到 GitHub 和 Coding 上</span>
               
             </a>
         
@@ -348,37 +320,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-23T09:57:36+08:00"
-              content="2018-03-23" >
-          03-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/03/21/基于-Hexo-GitHub-Pages-搭建个人博客（一）/" itemprop="url">
-              
-                <span itemprop="name">基于 Hexo + GitHub Pages 搭建个人博客（一）</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-21T21:39:20+08:00"
-              content="2018-03-21" >
-          03-21
+              datetime="2018-04-23T23:22:45+08:00"
+              content="2018-04-23" >
+          04-23
         </time>
       </div>
 
@@ -729,28 +673,6 @@
 
 
 
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item=>{
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: 'k62nkMLISmCYAXNB4VywsqCB-gzGzoHsz',
-        appKey: 'AJLPzDt7pnkJ5jWousnyjB0d',
-        placeholder: '抢沙发，留下你的足迹吧...',
-        avatar:'mm',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
-
 
 
   
@@ -1022,6 +944,78 @@
               });
               var searchResultList = '<ul class=\"search-result-list\">';
               resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+(result) {
                 searchResultList += result.item;
               })
               searchResultList += "</ul>";
