@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Study, Life, Work" />
+  <meta name="keywords" content="PHP,MySQL,ThinkPHP,PhpStorm," />
 
 
 
@@ -79,17 +79,21 @@
 
 
 
-<meta name="description" content="微信公众号：compassblog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="https://compassblog.github.io/categories/index.html">
+<meta name="description" content="一、前言今年疯狂迷上了开源，只要看到好的开源项目，就会不顾一切一股脑扎进去研究，五一期间发现一个很好的关于众筹的开源项目，但不巧，这个项目竟然是 PHP 写的，没学过 PHP，自然对这个开源项目毫无头绪了，但我竟然为了这个项目，毅然决定入坑 PHP，于是就出事了… 说时迟那时快， 2 小时入门 PHP，2 小时入门 ThinkPHP，鉴于我一直在研究 Java 的原因，所以不费吹灰之力就顺利入坑">
+<meta name="keywords" content="PHP,MySQL,ThinkPHP,PhpStorm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="解决：MySQL 报错：1045- Access denied for user &#39;root&#39;@&#39;localhost&#39;(using password YES)">
+<meta property="og:url" content="https://compassblog.github.io/2018/05/03/解决：MySQL-报错：1045-Access-denied-for-user-root-localhost-using-password-YES/index.html">
 <meta property="og:site_name" content="compassblog">
-<meta property="og:description" content="微信公众号：compassblog">
+<meta property="og:description" content="一、前言今年疯狂迷上了开源，只要看到好的开源项目，就会不顾一切一股脑扎进去研究，五一期间发现一个很好的关于众筹的开源项目，但不巧，这个项目竟然是 PHP 写的，没学过 PHP，自然对这个开源项目毫无头绪了，但我竟然为了这个项目，毅然决定入坑 PHP，于是就出事了… 说时迟那时快， 2 小时入门 PHP，2 小时入门 ThinkPHP，鉴于我一直在研究 Java 的原因，所以不费吹灰之力就顺利入坑">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-24T04:46:59.767Z">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/5/3/163268d5a4749f27?w=5184&h=3456&f=jpeg&s=1131102">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/5/3/163266e593e0c0d0?w=483&h=135&f=png&s=6719">
+<meta property="og:updated_time" content="2018-05-03T15:27:33.332Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
-<meta name="twitter:description" content="微信公众号：compassblog">
+<meta name="twitter:title" content="解决：MySQL 报错：1045- Access denied for user &#39;root&#39;@&#39;localhost&#39;(using password YES)">
+<meta name="twitter:description" content="一、前言今年疯狂迷上了开源，只要看到好的开源项目，就会不顾一切一股脑扎进去研究，五一期间发现一个很好的关于众筹的开源项目，但不巧，这个项目竟然是 PHP 写的，没学过 PHP，自然对这个开源项目毫无头绪了，但我竟然为了这个项目，毅然决定入坑 PHP，于是就出事了… 说时迟那时快， 2 小时入门 PHP，2 小时入门 ThinkPHP，鉴于我一直在研究 Java 的原因，所以不费吹灰之力就顺利入坑">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2018/5/3/163268d5a4749f27?w=5184&h=3456&f=jpeg&s=1131102">
 
 
 
@@ -119,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="https://compassblog.github.io/categories/"/>
+  <link rel="canonical" href="https://compassblog.github.io/2018/05/03/解决：MySQL-报错：1045-Access-denied-for-user-root-localhost-using-password-YES/"/>
 
 
 
 
 
-  <title>categories | compassblog</title>
+  <title>解决：MySQL 报错：1045- Access denied for user 'root'@'localhost'(using password YES) | compassblog</title>
   
 
 
@@ -294,40 +298,259 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://compassblog.github.io/2018/05/03/解决：MySQL-报错：1045-Access-denied-for-user-root-localhost-using-password-YES/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="孔乙己">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="compassblog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">categories</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                目前共计 15 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Git/GitHub/">GitHub</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/GitHub/">GitHub</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/GitHub/Coding/">Coding</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/Github/">Github</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/Github/Gitalk/">Gitalk</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/MyBatis/">MyBatis</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Markdown/">Markdown</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Maven/">Maven</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/学习工具/">学习工具</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/学习工具/思考与感悟/">思考与感悟</a><span class="category-list-count">1</span></li></ul></li></ul>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">解决：MySQL 报错：1045- Access denied for user 'root'@'localhost'(using password YES)</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-03T23:25:18+08:00">
+                2018-05-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MySQL/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p><img src="https://user-gold-cdn.xitu.io/2018/5/3/163268d5a4749f27?w=5184&amp;h=3456&amp;f=jpeg&amp;s=1131102" alt=""></p>
+<h1 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h1><p>今年疯狂迷上了开源，只要看到好的开源项目，就会不顾一切一股脑扎进去研究，五一期间发现一个很好的关于众筹的开源项目，但不巧，这个项目竟然是 PHP 写的，没学过 PHP，自然对这个开源项目毫无头绪了，但我竟然为了这个项目，毅然决定入坑 PHP，于是就出事了…</p>
+<p>说时迟那时快， 2 小时入门 PHP，2 小时入门 ThinkPHP，鉴于我一直在研究 Java 的原因，所以不费吹灰之力就顺利入坑。通过了解，PHP 开发必备环境是 PHP、Apache、MySQL以及一个好用的 IDE ，IDE 还是很好找的，我选择了 JetBrains 的 PhpStorm，而其他环境就是集全部功能于一身的 WampServer 了，安装完准备建数据库建表，打开 Navicat ，错误开始…</p>
+<h1 id="二、错误描述"><a href="#二、错误描述" class="headerlink" title="二、错误描述"></a>二、错误描述</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MySQL 报错：1045- Access denied for user &apos;root&apos;@&apos;localhost&apos;(using password YES)</span><br></pre></td></tr></table></figure>
+<p>如下图所示：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/5/3/163266e593e0c0d0?w=483&amp;h=135&amp;f=png&amp;s=6719" alt=""></p>
+<h1 id="三、错误原因"><a href="#三、错误原因" class="headerlink" title="三、错误原因"></a>三、错误原因</h1><p>安装了 WampServer 这个集 PHP 开发环境于一身的神器后，里面的 MySQL 网页管理软件 phpMyAdmin 使得数据库的 root 用户权限发生改变，也可以说是由于两者的密码不一致导致密码错乱有了这个错误（我自己理解），因为 phpMyAdmin 安装完成后的默认密码是空的。</p>
+<a id="more"></a>
+<h1 id="四、错误解决"><a href="#四、错误解决" class="headerlink" title="四、错误解决"></a>四、错误解决</h1><p>直接充值密码即可解决数据这个报错问题。</p>
+<p>首先，停止掉数据的运行，这个我相信大家都可以做到了，可以直接从管理服务程序中停止，也可以直接在 cmd 命令窗口输入命令 net stop mysql 来停止。</p>
+<p>然后进入 MySQL 的安装路径，找到并打开 my.ini 文件，找到 [mysqld] 字段，在这个字段下面增加下面这个语句：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">skip_grant_tables</span><br></pre></td></tr></table></figure>
+<p>紧接着重启数据库，这个我相信大家也可以做到了，可以直接在管理服务程序中开启，也可以直接在 cmd 命令窗口中输入命令 net start mysql 来开启，进而在命令窗口执行一下命令，重置密码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update user set password=&apos;root&apos; where user=&apos;root&apos;</span><br></pre></td></tr></table></figure>
+<p>当然，我是直接将密码重置为 root，反正这个密码大家自定义就好，不过要记住密码。</p>
+<p>最后就是再次停止数据库的运行，返回前面提到的 my.ini 文件去掉 skip_grant_tables 字段后保存，再次重启数据库就可以成功解决这个 MySQL 的报错了。</p>
+<h1 id="五、问题继续"><a href="#五、问题继续" class="headerlink" title="五、问题继续"></a>五、问题继续</h1><p>我在第四部完美的解决了命令窗口启动进入数据的这种报错，然后当我重新进入 Navicat 打开本地建立的连接的时候，继续报同样的错误，也就是说错误并没有解决，很纳闷，为啥命令行可以顺利操作数据库不报错，进入 Navicat 客户端就报错呢？</p>
+<p>折腾半天，发现在 root 权限错乱而重置密码之后，在 Navicat 中已经建立的连接是不可逆的。</p>
+<p>折腾半天，发现解决办法也很简单，要么删除连接后重新建一个连接，当然，删除连接后并不会已经建立的数据库，要么重装 Navicat ，至于选哪一种，自行选择，我都试过，都可以成功解决 Navicat 报这个错误。</p>
+<h1 id="六、问题再来"><a href="#六、问题再来" class="headerlink" title="六、问题再来"></a>六、问题再来</h1><p>当本地的错误完美解决之后，我打开 phpMyAdmin 网页，竟然报了一个与前面的错误很相似却又有异的错误，错误如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1045- Access denied for user &apos;root&apos;@&apos;localhost&apos;(using password NO)</span><br></pre></td></tr></table></figure>
+<p>当我把本地的 phpMyAdmin 配置文件中的密码也设置为 MySQL 数据库的密码后，打开后还是继续报同样的错误，不断打开不断报错，又折腾半天，最后在 StackOverFlow 上找到了解决办法：直接清除浏览器的 Cookie 缓存就可以解决这个问题。也就是说，我本地的配置是没有任何错误的，而打开网页继续报错的原因是之前报错时浏览器已经把 phpMyAdmin 的登录密码缓存到了 Cookie之中。</p>
+<p>好了，所有问题完美解决，特此记录。</p>
+<p>解决完这个问题我们明白，如果遇到某些错误精心想想，而不是一股脑扎进错误之中研究错误，可能半小时就可以解决问题了，也不至于折腾一个半天后又折腾一个半天咯。</p>
+
       
     </div>
     
     
     
+	
+	
+      <div>
+        
+    <div style="text-align:center;color: #ccc;font-size:14px;">
+        ------ 本文结束<i class="fa fa-paw"></i>感谢您的阅读 ------</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/wechat-qcode.jpg" alt="孔乙己 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>扫描二维码关注微信公众号，了解更多</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>赞赏是最好的支持与鼓励！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="孔乙己 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="孔乙己 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    孔乙己
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://compassblog.github.io/2018/05/03/解决：MySQL-报错：1045-Access-denied-for-user-root-localhost-using-password-YES/" title="解决：MySQL 报错：1045- Access denied for user 'root'@'localhost'(using password YES)">https://compassblog.github.io/2018/05/03/解决：MySQL-报错：1045-Access-denied-for-user-root-localhost-using-password-YES/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://compassblog.github.io/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/PHP/" rel="tag"># PHP</a>
+          
+            <a href="/tags/MySQL/" rel="tag"># MySQL</a>
+          
+            <a href="/tags/ThinkPHP/" rel="tag"># ThinkPHP</a>
+          
+            <a href="/tags/PhpStorm/" rel="tag"># PhpStorm</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/23/将-Hexo-个人博客同时部署到-GitHub-和-Coding-上/" rel="next" title="将 Hexo 个人博客同时部署到 GitHub 和 Coding 上">
+                <i class="fa fa-chevron-left"></i> 将 Hexo 个人博客同时部署到 GitHub 和 Coding 上
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -336,6 +559,14 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+	
+  
+
+
 
         </div>
         
@@ -356,8 +587,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -477,6 +717,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、前言"><span class="nav-number">1.</span> <span class="nav-text">一、前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、错误描述"><span class="nav-number">2.</span> <span class="nav-text">二、错误描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、错误原因"><span class="nav-number">3.</span> <span class="nav-text">三、错误原因</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、错误解决"><span class="nav-number">4.</span> <span class="nav-text">四、错误解决</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、问题继续"><span class="nav-number">5.</span> <span class="nav-text">五、问题继续</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六、问题再来"><span class="nav-number">6.</span> <span class="nav-text">六、问题再来</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
