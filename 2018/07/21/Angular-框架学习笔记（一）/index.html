@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="前端,JS框架,Angular," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="过来人肯定都知道， Angular 是一个框架，为何现在突然要学 Angular 呢？没法子，编程行业就是这样的，要么趁早学了，要么需要用到的时候赶紧学，很明显，我属于后者。 最近的一个项目需要用到 Angular 来写，包括前后端的数据交互还有页面渲染都要用到 Angular 框架，以前没学过，现在必须学习一下这个框架才能深入这个项目，所以就入坑了。 ，以及Angular 和 AngularJ">
+<meta name="keywords" content="前端,JS框架,Angular">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Angular 框架学习笔记（一）">
+<meta property="og:url" content="https://compassblog.github.io/2018/07/21/Angular-框架学习笔记（一）/index.html">
+<meta property="og:site_name" content="指南者博客">
+<meta property="og:description" content="过来人肯定都知道， Angular 是一个框架，为何现在突然要学 Angular 呢？没法子，编程行业就是这样的，要么趁早学了，要么需要用到的时候赶紧学，很明显，我属于后者。 最近的一个项目需要用到 Angular 来写，包括前后端的数据交互还有页面渲染都要用到 Angular 框架，以前没学过，现在必须学习一下这个框架才能深入这个项目，所以就入坑了。 ，以及Angular 和 AngularJ">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006ys8vugy1fthk93w21bj31b90q9dh8.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006ys8vugy1fthgqq2i45j30or0dk74h.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006ys8vugy1fthh4lgsl6j30my0cp3z0.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006ys8vugy1fthhhfthcsj30or0ccdg5.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006ys8vugy1fthk2tq2v5j30nc088jrk.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006ys8vugy1fthi9precgj30r708fglj.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006ys8vugy1fthinsduppj30qn0710ss.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006ys8vugy1fthiq6np1jj30qj0bldfs.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006ys8vugy1fthjpempblj30r70e874u.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006ys8vugy1fthjspcb5xj30r70avq31.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006ys8vugy1fthjw9ne4pj311t0i03zf.jpg">
+<meta property="og:updated_time" content="2018-07-21T11:25:16.920Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Angular 框架学习笔记（一）">
+<meta name="twitter:description" content="过来人肯定都知道， Angular 是一个框架，为何现在突然要学 Angular 呢？没法子，编程行业就是这样的，要么趁早学了，要么需要用到的时候赶紧学，很明显，我属于后者。 最近的一个项目需要用到 Angular 来写，包括前后端的数据交互还有页面渲染都要用到 Angular 框架，以前没学过，现在必须学习一下这个框架才能深入这个项目，所以就入坑了。 ，以及Angular 和 AngularJ">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/006ys8vugy1fthk93w21bj31b90q9dh8.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://compassblog.github.io/2018/07/21/Angular-框架学习笔记（一）/"/>
+
+
+
+
+
+  <title>Angular 框架学习笔记（一） | 指南者博客</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?0ef9e4d6a72f4248ab720ca41f7f9db1";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">指南者博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">非淡泊无以明志，非宁静无以致远</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://compassblog.github.io/2018/07/21/Angular-框架学习笔记（一）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="孔乙己">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="指南者博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Angular 框架学习笔记（一）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-21T19:23:12+08:00">
+                2018-07-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Angular/" itemprop="url" rel="index">
+                    <span itemprop="name">Angular</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="http://ww1.sinaimg.cn/large/006ys8vugy1fthk93w21bj31b90q9dh8.jpg" alt=""></p>
+<p>过来人肯定都知道， Angular 是一个框架，为何现在突然要学 Angular 呢？没法子，编程行业就是这样的，要么趁早学了，要么需要用到的时候赶紧学，很明显，我属于后者。</p>
+<p>最近的一个项目需要用到 Angular 来写，包括前后端的数据交互还有页面渲染都要用到 Angular 框架，以前没学过，现在必须学习一下这个框架才能深入这个项目，所以就入坑了。 ，以及Angular 和 AngularJS 的区别等等</p>
+<h3 id="一、Angular-简介"><a href="#一、Angular-简介" class="headerlink" title="一、Angular 简介"></a>一、Angular 简介</h3><p>我很早之前就听过 AngularJS 了，但是基本没听说过 Angular，起初以为这两个是一样的，入坑了才发现，不太一样，差别还有点大。简单点来说，Angular 就是 AngularJS 的 2.0 版本，并且，Angular 是完全不兼容 AngularJS 。</p>
+<h4 id="1、AngularJS"><a href="#1、AngularJS" class="headerlink" title="1、AngularJS"></a>1、AngularJS</h4><p>AngularJS 1.0 在 2012 年 6 月由 Google 公司推出正式版本，是一款非常优秀的 JavaScript 框架， 推出之后就已经具备了数据的双向绑定、依赖注入、通过指令扩展 HTML 页面等亮点功能。</p>
+<p>后逐渐又推出了 AngularJS 1.3、AngularJS 2.5 等版本，但是AngularJS 从推出来也暴露出来各种问题，这就加速了 Angular 的诞生。</p>
+<p><img src="http://ww1.sinaimg.cn/large/006ys8vugy1fthgqq2i45j30or0dk74h.jpg" alt=""></p>
+<h4 id="2、Angular"><a href="#2、Angular" class="headerlink" title="2、Angular"></a>2、Angular</h4><p>Angular 也叫 Angular 2，反正网上是什么叫法都有了，叫什么都不是太重要了，我自己习惯把 1.0 版本叫 AngularJS，2.0 版本叫 Angular，能区分就好了。</p>
+<p>2014 年 3 月份左右，Google 官方博客就有提及 Angular 的开发计划，直到到 2016 年 9 月份，Angular 2.0 版本正式发布。</p>
+<p>Angular 发布之后，增加了很多的新特性，基本上解决掉 AngularJS 版本存在的各种问题。</p>
+<p><img src="http://ww1.sinaimg.cn/large/006ys8vugy1fthh4lgsl6j30my0cp3z0.jpg" alt=""></p>
+<a id="more"></a>
+<h3 id="二、Angular-核心要素"><a href="#二、Angular-核心要素" class="headerlink" title="二、Angular 核心要素"></a>二、Angular 核心要素</h3><p><img src="http://ww1.sinaimg.cn/large/006ys8vugy1fthhhfthcsj30or0ccdg5.jpg" alt=""></p>
+<p>感觉 Angular 中有太多的概念了，对于一个我一个初级开发者来说，知道最好，实在不知道的也没什么影响了，主要是懂的开发，明白其中的原理才是最重点，后面会慢慢的对具体的模块做一定的讲解。</p>
+<p>Angular 中最重要的就是「组件」了，这个是必须要会的。Angular 的一个组件由「装饰器」「元数据」「组件类」组成，包括 JavaScript、HTML、CSS 等要素。如下就是一个组件中的简单代码：</p>
+<p><img src="http://ww1.sinaimg.cn/large/006ys8vugy1fthk2tq2v5j30nc088jrk.jpg" alt=""></p>
+<h3 id="三、搭建开发环境"><a href="#三、搭建开发环境" class="headerlink" title="三、搭建开发环境"></a>三、搭建开发环境</h3><p>Angular 的开发环境非常简单，只需要安装一下 Node.js 和 Angular CLI，再加上一个简单的 IDE 工具，就可以进行学习和开发了。至于 IDE 的话，可以使用 VS code，我自己暂时就简单使用了 Sublime Text 3 。</p>
+<p><strong>1、安装 Node.js：</strong> Angular 的开发要求 Node 8.0 以上的版本，如果是老一点的版本可能需要更新，否则可能会出现错误。</p>
+<blockquote>
+<p>Node.js 下载地址：<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">点击前往官网下载</a> </p>
+</blockquote>
+<p>下载完成后，直接点击安装即可，安装的步骤也非常的简单，基本上都是直接按 Next ，就可完成安装了。安装完成后，打开命令行，输入如下命令即可查看 node 和它的命令 npm 的具体版本了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">查看 node 版本命令：node -v</span><br><span class="line">查看 npm 版本命令：npm -v</span><br></pre></td></tr></table></figure>
+<p>我的版本如下图所示：</p>
+<p><img src="http://ww1.sinaimg.cn/large/006ys8vugy1fthi9precgj30r708fglj.jpg" alt=""></p>
+<p><strong>2、安装 Angular CLI：</strong>一款好的工具能让开发更加简单快捷，而 Angular CLI 就是这款工具了。Angular CLI 是一个命令行界面的工具，可以快速的创建项目、添加文件以及执行一大堆开发任务，比如测试、打包和发布等等。</p>
+<p>而 Angular CLI 的安装就是使用我们前面安装的 npm 命令，直接在命令行进行安装。以管理员的身份打开命令行，直接输入如下命令即可安装 Angular CLI ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @angular/cli</span><br></pre></td></tr></table></figure>
+<p>如下图所示：</p>
+<p><img src="http://ww1.sinaimg.cn/large/006ys8vugy1fthinsduppj30qn0710ss.jpg" alt=""></p>
+<p>安装成功后，输入如下命令可以查看 Angular CLI 的版本号：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ng -v</span><br></pre></td></tr></table></figure>
+<p>如下图所示：</p>
+<p><img src="http://ww1.sinaimg.cn/large/006ys8vugy1fthiq6np1jj30qj0bldfs.jpg" alt=""></p>
+<h3 id="四、创建第一个-Angular-项目"><a href="#四、创建第一个-Angular-项目" class="headerlink" title="四、创建第一个 Angular 项目"></a>四、创建第一个 Angular 项目</h3><p><strong>1、直接打开命令行窗口，进入到某个你存放项目的目录，输入如下指令：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ng new my-app</span><br></pre></td></tr></table></figure>
+<p>Angular CLI 的这个指令会帮助我们创建项目相关的文件，并在该项目中生成一个简单的默认应用。 稍等片刻，创建完成后如下图所示：</p>
+<p><img src="http://ww1.sinaimg.cn/large/006ys8vugy1fthjpempblj30r70e874u.jpg" alt=""></p>
+<p><strong>2、输入如下指令，进入项目目录，并启动服务器：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd my-angular-app</span><br><span class="line">ng serve --open</span><br></pre></td></tr></table></figure>
+<p><code>ng serve</code> 命令会启动开发服务器，监听文件变化，并在修改这些文件时重新构建此应用。使用 <code>--open</code>（或 <code>-o</code>） 可以自动跳转到浏览器进行访问， 如下图所示：</p>
+<p><img src="http://ww1.sinaimg.cn/large/006ys8vugy1fthjspcb5xj30r70avq31.jpg" alt=""></p>
+<p><strong>3、启动成功后，会自动跳转到浏览器页面，服务器的端口是 4200，也可以自动打开浏览器并访问：</strong></p>
+<p><code>http://localhost:4200/</code> </p>
+<p>页面如下图所示：</p>
+<p><img src="http://ww1.sinaimg.cn/large/006ys8vugy1fthjw9ne4pj311t0i03zf.jpg" alt=""></p>
+<p>项目就此构建完成，整体上比较简单，也比较容易理解。最后，做个预告，下一篇笔记会来讲讲 Angular 项目文件详解和 Angular CLI 的一些常用的指令。</p>
+
+      
+    </div>
+    
+    
+    
+	
+	
+      <div>
+        
+    <div style="text-align:center;color: #ccc;font-size:14px;">
+        ------ 本文结束<i class="fa fa-paw"></i>感谢您的阅读 ------</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/wechat-qcode.jpg" alt="孔乙己 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>扫描二维码关注微信公众号，了解更多</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>赞赏是最好的支持与鼓励！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="孔乙己 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="孔乙己 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    孔乙己
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://compassblog.github.io/2018/07/21/Angular-框架学习笔记（一）/" title="Angular 框架学习笔记（一）">https://compassblog.github.io/2018/07/21/Angular-框架学习笔记（一）/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://compassblog.github.io/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端/" rel="tag"># 前端</a>
+          
+            <a href="/tags/JS框架/" rel="tag"># JS框架</a>
+          
+            <a href="/tags/Angular/" rel="tag"># Angular</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/30/今天谈谈教师资格证/" rel="next" title="今天谈谈教师资格证">
+                <i class="fa fa-chevron-left"></i> 今天谈谈教师资格证
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+	
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/logo.jpg"
+                alt="孔乙己" />
+            
+              <p class="site-author-name" itemprop="name">孔乙己</p>
+              <p class="site-description motion-element" itemprop="description">微信公众号：孔乙己学习成长录</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://mp.weixin.qq.com/s?__biz=MzU5MTE0ODcwNQ==&mid=100000508&idx=1&sn=915e6281b1d9791d089780b3fb5b570f&pass_ticket=1p%2FxgnizroSkqgsPp6750rKwJ%2F8bylhCWKcIjdeYm0xqLhUK9CFQv169LtPAdfW4" target="_blank" title="Wechat">
+                      
+                        <i class="fa fa-fw fa-wechat"></i>Wechat</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/compassblog" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:compassblog@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://stackoverflow.com/users/9525953/compassblog" target="_blank" title="StackOverflow">
+                      
+                        <i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://juejin.im/user/5a8818515188257a6a78d489" title="掘金" target="_blank">掘金</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.zhihu.com/people/compassblog" title="知乎" target="_blank">知乎</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.compasser.top/" title="compassblog" target="_blank">compassblog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.jianshu.com/u/abbd9852b382" title="简书" target="_blank">简书</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://blog.csdn.net/leonard_kongtanhuo" title="CSND" target="_blank">CSND</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.cnblogs.com/compassblog/" title="cnblogs" target="_blank">cnblogs</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.belive.cc/" title="湖畔一枝花" target="_blank">湖畔一枝花</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、Angular-简介"><span class="nav-number">1.</span> <span class="nav-text">一、Angular 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、AngularJS"><span class="nav-number">1.1.</span> <span class="nav-text">1、AngularJS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、Angular"><span class="nav-number">1.2.</span> <span class="nav-text">2、Angular</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、Angular-核心要素"><span class="nav-number">2.</span> <span class="nav-text">二、Angular 核心要素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、搭建开发环境"><span class="nav-number">3.</span> <span class="nav-text">三、搭建开发环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、创建第一个-Angular-项目"><span class="nav-number">4.</span> <span class="nav-text">四、创建第一个 Angular 项目</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">指南者</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+  
+  
+
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
