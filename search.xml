@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[既然可以极致，为何要随便？]]></title>
+    <url>%2F2019%2F12%2F30%2F%E6%97%A2%E7%84%B6%E5%8F%AF%E4%BB%A5%E6%9E%81%E8%87%B4%EF%BC%8C%E4%B8%BA%E4%BD%95%E8%A6%81%E9%9A%8F%E4%BE%BF%EF%BC%9F%2F</url>
+    <content type="text"><![CDATA[最近在工作上表现出来非常随意，得过且过。但是尽管没用什么力气，最终在结果上取得的成绩都不是太差的，我一度怀疑，是我太优秀，还是别人也一样不上心？ 实话说，现在大部分时间都是随机应付了事，基本没有花什么时间和精力，我完全没有去想过，如果我全力去做这些事情，是不是回去的更好的成绩呢。 很多时候都不愿意把事情做到极致，但是既然可以把事情做到极致，又为什么要随便应付了事？……]]></content>
+      <categories>
+        <category>日志</category>
+        <category>工作</category>
+      </categories>
+      <tags>
+        <tag>日志</tag>
+        <tag>工作</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[五个月之后]]></title>
     <url>%2F2019%2F12%2F30%2F%E4%BA%94%E4%B8%AA%E6%9C%88%E4%B9%8B%E5%90%8E%2F</url>
     <content type="text"><![CDATA[距离上一篇博客日志，已经过去超过 5 个月了，本来我已经要放弃写博客，觉得发生的一切，发生的就过去了，已经没必要记录，但是那都是生活太顺营造出来的幻觉，只有当自己遇到挫折和不顺之后，才会再次明白：生活是需要记录的。 这期间，是我刚刚踏入社会的阶段，酸甜苦辣人情冷暖，多少都有经历到的，但是依然不能明白发，人究竟为何而活？人为什么要结婚？为什么要生小孩？…… 一切尽在不言中，生命不息，奋斗不止。五个月之后，我回来了！]]></content>
@@ -329,8 +342,8 @@
         <category>Maven</category>
       </categories>
       <tags>
-        <tag>Java</tag>
         <tag>Maven</tag>
+        <tag>Java</tag>
         <tag>项目管理工具</tag>
       </tags>
   </entry>
@@ -342,8 +355,8 @@
         <category>Maven</category>
       </categories>
       <tags>
-        <tag>Java</tag>
         <tag>Maven</tag>
+        <tag>Java</tag>
         <tag>项目管理工具</tag>
       </tags>
   </entry>
